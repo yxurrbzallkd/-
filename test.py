@@ -21,7 +21,7 @@ def extract_graph(img, background):
     return np.array(graph)
 
 
-img = plt.imread('demo_image.png')
+img = plt.imread('2.jpg')
 codebook_random, kmeans, labels, labels_random, w, h = quantize(img, n_colors)
 newimg = recreate_image(kmeans.cluster_centers_, labels, w, h)
 graph = extract_graph(newimg, 0)
